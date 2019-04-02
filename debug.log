@@ -1,0 +1,39 @@
+[0326/175354.674:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files (x86)\temp\settings.dat: Odmowa dostêpu. (0x5)
+[0326/175354.721:ERROR:registration_protocol_win.cc(83)] TransactNamedPipe: Potok zosta³ zakoñczony. (0x6D)
+[0326/175354.737:ERROR:crashpad_win.cc(223)] Crashpad handler failed to start, crash reporting disabled
+[0326/175426.796:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files (x86)\temp\settings.dat: Odmowa dostêpu. (0x5)
+[0326/175426.842:ERROR:registration_protocol_win.cc(83)] TransactNamedPipe: Potok zosta³ zakoñczony. (0x6D)
+[0326/175426.864:ERROR:crashpad_win.cc(223)] Crashpad handler failed to start, crash reporting disabled
+[0326/180612.240:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files (x86)\temp\settings.dat: Odmowa dostêpu. (0x5)
+[0326/180612.283:ERROR:registration_protocol_win.cc(83)] TransactNamedPipe: Potok zosta³ zakoñczony. (0x6D)
+[0326/180612.301:ERROR:crashpad_win.cc(223)] Crashpad handler failed to start, crash reporting disabled
+[0326/180646.666:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files (x86)\temp\settings.dat: Odmowa dostêpu. (0x5)
+[0326/180646.728:ERROR:registration_protocol_win.cc(83)] TransactNamedPipe: Potok zosta³ zakoñczony. (0x6D)
+[0326/180646.750:ERROR:crashpad_win.cc(223)] Crashpad handler failed to start, crash reporting disabled
+[0326/180731.424:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files (x86)\temp\settings.dat: Odmowa dostêpu. (0x5)
+[0326/180731.468:ERROR:registration_protocol_win.cc(83)] TransactNamedPipe: Potok zosta³ zakoñczony. (0x6D)
+[0326/180731.489:ERROR:crashpad_win.cc(223)] Crashpad handler failed to start, crash reporting disabled
+[0326/180829.948:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files (x86)\temp\settings.dat: Odmowa dostêpu. (0x5)
+[0326/180829.991:ERROR:registration_protocol_win.cc(83)] TransactNamedPipe: Potok zosta³ zakoñczony. (0x6D)
+[0326/180830.010:ERROR:crashpad_win.cc(223)] Crashpad handler failed to start, crash reporting disabled
+[0326/181022.654:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files (x86)\temp\settings.dat: Odmowa dostêpu. (0x5)
+[0326/181022.697:ERROR:registration_protocol_win.cc(83)] TransactNamedPipe: Potok zosta³ zakoñczony. (0x6D)
+[0326/181022.716:ERROR:crashpad_win.cc(223)] Crashpad handler failed to start, crash reporting disabled
+[0326/181124.947:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files (x86)\temp\settings.dat: Odmowa dostêpu. (0x5)
+[0326/181124.989:ERROR:registration_protocol_win.cc(83)] TransactNamedPipe: Potok zosta³ zakoñczony. (0x6D)
+[0326/181125.009:ERROR:crashpad_win.cc(223)] Crashpad handler failed to start, crash reporting disabled
+[0326/181131.398:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files (x86)\temp\settings.dat: Odmowa dostêpu. (0x5)
+[0326/181131.440:ERROR:registration_protocol_win.cc(83)] TransactNamedPipe: Potok zosta³ zakoñczony. (0x6D)
+[0326/181131.465:ERROR:crashpad_win.cc(223)] Crashpad handler failed to start, crash reporting disabled
+[0326/181204.123:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files (x86)\temp\settings.dat: Odmowa dostêpu. (0x5)
+[0326/181204.168:ERROR:registration_protocol_win.cc(83)] TransactNamedPipe: Potok zosta³ zakoñczony. (0x6D)
+[0326/181204.198:ERROR:crashpad_win.cc(223)] Crashpad handler failed to start, crash reporting disabled
+[0326/181243.446:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files (x86)\temp\settings.dat: Odmowa dostêpu. (0x5)
+[0326/181243.503:ERROR:registration_protocol_win.cc(83)] TransactNamedPipe: Potok zosta³ zakoñczony. (0x6D)
+[0326/181243.527:ERROR:crashpad_win.cc(223)] Crashpad handler failed to start, crash reporting disabled
+[0326/181348.702:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files (x86)\temp\settings.dat: Odmowa dostêpu. (0x5)
+[0326/181348.745:ERROR:registration_protocol_win.cc(83)] TransactNamedPipe: Potok zosta³ zakoñczony. (0x6D)
+[0326/181348.765:ERROR:crashpad_win.cc(223)] Crashpad handler failed to start, crash reporting disabled
+[0326/181523.093:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files (x86)\temp\settings.dat: Odmowa dostêpu. (0x5)
+[0326/181523.134:ERROR:registration_protocol_win.cc(83)] TransactNamedPipe: Potok zosta³ zakoñczony. (0x6D)
+[0326/181523.154:ERROR:crashpad_win.cc(223)] Crashpad handler failed to start, crash reporting disabled

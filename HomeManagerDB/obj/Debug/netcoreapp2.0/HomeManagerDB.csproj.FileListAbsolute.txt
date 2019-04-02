@@ -1,0 +1,9 @@
+C:\Users\CM\source\repos\HomeManager\HomeManagerDB\bin\Debug\netcoreapp2.0\HomeManagerDB.deps.json
+C:\Users\CM\source\repos\HomeManager\HomeManagerDB\bin\Debug\netcoreapp2.0\HomeManagerDB.dll
+C:\Users\CM\source\repos\HomeManager\HomeManagerDB\obj\Debug\netcoreapp2.0\HomeManagerDB.csprojAssemblyReference.cache
+C:\Users\CM\source\repos\HomeManager\HomeManagerDB\obj\Debug\netcoreapp2.0\HomeManagerDB.csproj.CoreCompileInputs.cache
+C:\Users\CM\source\repos\HomeManager\HomeManagerDB\obj\Debug\netcoreapp2.0\HomeManagerDB.AssemblyInfoInputs.cache
+C:\Users\CM\source\repos\HomeManager\HomeManagerDB\obj\Debug\netcoreapp2.0\HomeManagerDB.AssemblyInfo.cs
+C:\Users\CM\source\repos\HomeManager\HomeManagerDB\bin\Debug\netcoreapp2.0\HomeManagerDB.pdb
+C:\Users\CM\source\repos\HomeManager\HomeManagerDB\obj\Debug\netcoreapp2.0\HomeManagerDB.dll
+C:\Users\CM\source\repos\HomeManager\HomeManagerDB\obj\Debug\netcoreapp2.0\HomeManagerDB.pdb
