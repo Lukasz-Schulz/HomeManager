@@ -1,0 +1,15 @@
+C:\Users\CM\source\repos\HomeManager\HomeManager\obj\Debug\netcoreapp2.0\HomeManager.csprojAssemblyReference.cache
+C:\Users\CM\source\repos\HomeManager\HomeManager\obj\Debug\netcoreapp2.0\HomeManager.csproj.CoreCompileInputs.cache
+C:\Users\CM\source\repos\HomeManager\HomeManager\obj\Debug\netcoreapp2.0\HomeManager.AssemblyInfoInputs.cache
+C:\Users\CM\source\repos\HomeManager\HomeManager\obj\Debug\netcoreapp2.0\HomeManager.AssemblyInfo.cs
+C:\Users\CM\source\repos\HomeManager\HomeManager\bin\Debug\netcoreapp2.0\HomeManager.deps.json
+C:\Users\CM\source\repos\HomeManager\HomeManager\bin\Debug\netcoreapp2.0\HomeManager.runtimeconfig.json
+C:\Users\CM\source\repos\HomeManager\HomeManager\bin\Debug\netcoreapp2.0\HomeManager.runtimeconfig.dev.json
+C:\Users\CM\source\repos\HomeManager\HomeManager\bin\Debug\netcoreapp2.0\HomeManager.dll
+C:\Users\CM\source\repos\HomeManager\HomeManager\bin\Debug\netcoreapp2.0\HomeManager.pdb
+C:\Users\CM\source\repos\HomeManager\HomeManager\bin\Debug\netcoreapp2.0\Home.dll
+C:\Users\CM\source\repos\HomeManager\HomeManager\bin\Debug\netcoreapp2.0\Home.pdb
+C:\Users\CM\source\repos\HomeManager\HomeManager\obj\Debug\netcoreapp2.0\HomeManager.csproj.CopyComplete
+C:\Users\CM\source\repos\HomeManager\HomeManager\obj\Debug\netcoreapp2.0\HomeManager.dll
+C:\Users\CM\source\repos\HomeManager\HomeManager\obj\Debug\netcoreapp2.0\HomeManager.pdb
+C:\Users\CM\source\repos\HomeManager\HomeManager\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs

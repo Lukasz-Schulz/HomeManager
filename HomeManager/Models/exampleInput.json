@@ -1,0 +1,26 @@
+﻿{
+  "_Adress": {
+    "ID": 123,
+    "_StreetName": "Worcella",
+    "_HouseNumber": 16,
+    "_FlatNumber": 1,
+    "_City": "Gdansk",
+    "_PostalCode": "80-809"
+  },
+  "_Counters": [],
+  "_Owner": {
+    "ID": 345,
+    "_FirstName": "Ewelina",
+    "_SecondName": "S",
+    "_Email": "ewelina@wp.pl"
+  },
+  "_Contracts": [
+    {
+      "ID": 234,
+      "_SigningDate": "2019-03-24T21:52:03.4035163+01:00",
+      "_EndDate": "2019-03-24T21:52:03.4055164+01:00",
+      "_FtpAdress": "c://tu"
+    }
+  ],
+  "_ID": 890
+}
