@@ -4756,6 +4756,16 @@
         "runtime": {
           "bin/placeholder/Home.dll": {}
         }
+      },
+      "HomeManagerSecurity/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/HomeManagerSecurity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HomeManagerSecurity.dll": {}
+        }
       }
     }
   },
@@ -12668,11 +12678,17 @@
       "type": "project",
       "path": "../Home/Home.csproj",
       "msbuildProject": "../Home/Home.csproj"
+    },
+    "HomeManagerSecurity/1.0.0": {
+      "type": "project",
+      "path": "../Encrypter_decrypter/HomeManagerSecurity.csproj",
+      "msbuildProject": "../Encrypter_decrypter/HomeManagerSecurity.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "Home >= 1.0.0",
+      "HomeManagerSecurity >= 1.0.0",
       "Microsoft.AspNetCore.All >= 2.0.8",
       "Microsoft.NETCore.App >= 2.0.0"
     ]
@@ -12707,6 +12723,9 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
+            "C:\\Users\\CM\\source\\repos\\HomeManager\\Encrypter_decrypter\\HomeManagerSecurity.csproj": {
+              "projectPath": "C:\\Users\\CM\\source\\repos\\HomeManager\\Encrypter_decrypter\\HomeManagerSecurity.csproj"
+            },
             "C:\\Users\\CM\\source\\repos\\HomeManager\\Home\\Home.csproj": {
               "projectPath": "C:\\Users\\CM\\source\\repos\\HomeManager\\Home\\Home.csproj"
             }

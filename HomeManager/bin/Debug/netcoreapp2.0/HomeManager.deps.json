@@ -24,6 +24,7 @@
       "HomeManager/1.0.0": {
         "dependencies": {
           "Home": "1.0.0",
+          "HomeManagerSecurity": "1.0.0",
           "Microsoft.AspNetCore.All": "2.0.8",
           "Microsoft.NETCore.App": "2.0.0"
         },
@@ -3803,6 +3804,14 @@
           "Home.dll": {}
         }
       },
+      "HomeManagerSecurity/1.0.0": {
+        "runtime": {
+          "HomeManagerSecurity.dll": {}
+        },
+        "compile": {
+          "HomeManagerSecurity.dll": {}
+        }
+      },
       "Microsoft.NETCore.App/2.0.0": {
         "dependencies": {
           "Microsoft.NETCore.DotNetHostPolicy": "2.0.0",
@@ -5990,6 +5999,11 @@
       "hashPath": "windowsazure.storage.8.1.4.nupkg.sha512"
     },
     "Home/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HomeManagerSecurity/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

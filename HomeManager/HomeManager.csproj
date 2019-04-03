@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Encrypter_decrypter\HomeManagerSecurity.csproj" />
     <ProjectReference Include="..\Home\Home.csproj" />
   </ItemGroup>
 

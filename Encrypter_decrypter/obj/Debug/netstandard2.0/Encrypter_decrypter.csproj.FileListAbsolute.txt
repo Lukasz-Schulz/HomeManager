@@ -1,0 +1,9 @@
+C:\Users\CM\source\repos\HomeManager\Encrypter_decrypter\bin\Debug\netstandard2.0\Encrypter_decrypter.deps.json
+C:\Users\CM\source\repos\HomeManager\Encrypter_decrypter\bin\Debug\netstandard2.0\Encrypter_decrypter.dll
+C:\Users\CM\source\repos\HomeManager\Encrypter_decrypter\bin\Debug\netstandard2.0\Encrypter_decrypter.pdb
+C:\Users\CM\source\repos\HomeManager\Encrypter_decrypter\obj\Debug\netstandard2.0\Encrypter_decrypter.csprojAssemblyReference.cache
+C:\Users\CM\source\repos\HomeManager\Encrypter_decrypter\obj\Debug\netstandard2.0\Encrypter_decrypter.csproj.CoreCompileInputs.cache
+C:\Users\CM\source\repos\HomeManager\Encrypter_decrypter\obj\Debug\netstandard2.0\Encrypter_decrypter.AssemblyInfoInputs.cache
+C:\Users\CM\source\repos\HomeManager\Encrypter_decrypter\obj\Debug\netstandard2.0\Encrypter_decrypter.AssemblyInfo.cs
+C:\Users\CM\source\repos\HomeManager\Encrypter_decrypter\obj\Debug\netstandard2.0\Encrypter_decrypter.dll
+C:\Users\CM\source\repos\HomeManager\Encrypter_decrypter\obj\Debug\netstandard2.0\Encrypter_decrypter.pdb

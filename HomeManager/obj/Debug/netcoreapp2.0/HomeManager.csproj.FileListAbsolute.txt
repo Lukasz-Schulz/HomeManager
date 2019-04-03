@@ -13,3 +13,5 @@ C:\Users\CM\source\repos\HomeManager\HomeManager\obj\Debug\netcoreapp2.0\HomeMan
 C:\Users\CM\source\repos\HomeManager\HomeManager\obj\Debug\netcoreapp2.0\HomeManager.dll
 C:\Users\CM\source\repos\HomeManager\HomeManager\obj\Debug\netcoreapp2.0\HomeManager.pdb
 C:\Users\CM\source\repos\HomeManager\HomeManager\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\CM\source\repos\HomeManager\HomeManager\bin\Debug\netcoreapp2.0\HomeManagerSecurity.dll
+C:\Users\CM\source\repos\HomeManager\HomeManager\bin\Debug\netcoreapp2.0\HomeManagerSecurity.pdb
