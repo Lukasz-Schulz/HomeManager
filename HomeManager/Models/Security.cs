@@ -9,13 +9,6 @@ namespace HomeManager.Models
 {
     public class Security
     {
-        List<Session> _Sessions;
-
-        public Security()
-        {
-            _Sessions = new List<Session>();
-        }
-
         public string Encrypt(string s)
         {
             var encrypter = new Encrypter();
@@ -25,16 +18,17 @@ namespace HomeManager.Models
         private bool CheckCredentials(string login, string password)
         {
             DatabaseConnection database = new DatabaseConnection();
-            var user = database.GetUserData(login);
+            var user = database.GetEncryptedPassword(login);
             try
             {
-                if (user["Password"].Equals(Encrypt( password)))
+                var encrypted = Encrypt(password).Trim();
+                if (user["Password"].Trim().Equals(encrypted))
                 {
                     return true;
                 }
                 else
                 {
-                    return false;
+                return false;
                 }
             }
             catch
@@ -45,13 +39,13 @@ namespace HomeManager.Models
 
         public string Login(string login, string password)
         {
-            if (!(_Sessions.FindIndex(s => s.User == login) >= 0))
+            if (!Program.TheSessionHolder.CheckIfSessionForUserExists(login))
             {
                 bool isLogged = CheckCredentials(login, password);
                 if (isLogged)
                 {
-
-                    return "success";
+                    string newSessionKey = Program.TheSessionHolder.CreateSession(login);
+                    return newSessionKey;
                 }
                 else return "failure";
             }
@@ -60,23 +54,17 @@ namespace HomeManager.Models
 
         private void CreateSession(string user)
         {
-            if (!(_Sessions.FindIndex(s => s.User == user) >= 0))
+            if (!Program.TheSessionHolder.CheckIfSessionForUserExists(user))
             {
-                _Sessions.Add(new Session(user));
-            }
-            else
-            {
-                int index = _Sessions.FindIndex(s => s.User == user);
-                _Sessions[index].CheckSession();
+                Program.TheSessionHolder.CreateSession(user);
             }
         }
 
-        public bool Logout(string user)
+        public bool Logout(string sessionKey)
         {
             try
             {
-                int index = _Sessions.FindIndex(s => s.User == user);
-                _Sessions[index].DestroySession();
+                Program.TheSessionHolder.DropSession(sessionKey);
                 return true;
             }
             catch

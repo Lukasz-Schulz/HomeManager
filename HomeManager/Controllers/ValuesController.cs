@@ -13,9 +13,11 @@ namespace HomeManager.Controllers
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
+        Security security = new Security();
         public ValuesController()
         {
-            var i = 1;
+            var test = Program.TheSessionHolder;
+            
         }
 
         readonly Security _LocalSecurity = new Security();
@@ -29,7 +31,7 @@ namespace HomeManager.Controllers
             //Home.Home home = homeFactory.CreateHomeFromDataBase("8902");
 
             DatabaseConnection database = new DatabaseConnection();
-            var user = database.GetUserData("admin");
+            //var user = database.GetUserData("admin");
             //database.AddHomeToDatabase(home);
 
             //foreach (var c in home._Counters)
@@ -72,10 +74,20 @@ namespace HomeManager.Controllers
         [HttpPost("{id}")]
         public string Post([FromForm]Dictionary<string,string> value, string id)
         {
+            string response;
             if (id.Equals("login"))
             {
-                var response = _LocalSecurity.Login(value["Login"], value["Password"]);
+                response = security.Login(value["login"], value["password"]);
                 return response;
+            }
+            else if (id.Equals("logout"))
+            {
+                bool success = security.Logout(value["sessionKey"]);
+                return success.ToString();
+            }
+            else
+            {
+                return Program.TheSessionHolder.ProlongSession(value["sessionKey"]).ToString();
             }
 
             BasicHomeFactory basicHomeFactory = new BasicHomeFactory();
