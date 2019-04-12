@@ -285,38 +285,36 @@ namespace Home
             return sqlResponse;
         }
 
-        //public Dictionary<string, string> GetMediaMeters(string ownerName)
-        //{
-        //    Dictionary<string, string> sqlResponse = new Dictionary<string, string>();
-        //    string query = @"SELECT Phone_number, Email, City, Postal_code, Street, Number FROM Companies WHERE Name=@param
-        //        LIMIT 1";
-        //    _sqlCommand = new SqlCommand(query, _sqlConnection);
-        //    _sqlCommand.Parameters.AddWithValue("@param", companyName);
-        //    try
-        //    {
-        //        _sqlCommand.Connection.Open();
-        //        _dataReader = _sqlCommand.ExecuteReader();
+        public Dictionary<string, string> GetEncryptedPassword(string login)
+        {
+            Dictionary<string, string> sqlResponse = new Dictionary<string, string>();
+            string query = @"SELECT Password FROM Users WHERE Login=@param";
+            using (_sqlConnection = new SqlConnection(ConnectionString))
+            {
+                _sqlCommand = new SqlCommand(query, _sqlConnection);
+                _sqlCommand.Parameters.AddWithValue("@param", login);
+                try
+                {
+                    _sqlCommand.Connection.Open();
+                    _dataReader = _sqlCommand.ExecuteReader();
 
-        //        while (_dataReader.Read())
-        //        {
-        //            sqlResponse.Add(_dataReader.GetName(0), _dataReader.GetSqlValue(0).ToString());
-        //            sqlResponse.Add(_dataReader.GetName(1), _dataReader.GetString(1));
-        //            sqlResponse.Add(_dataReader.GetName(2), _dataReader.GetString(2));
-        //            sqlResponse.Add(_dataReader.GetName(3), _dataReader.GetString(3));
-        //            sqlResponse.Add(_dataReader.GetName(4), _dataReader.GetString(4));
-        //            sqlResponse.Add(_dataReader.GetName(5), _dataReader.GetString(5));
-        //        }
-        //    }
-        //    catch (Exception)
-        //    {
-        //        return null;
-        //    }
-        //    finally
-        //    {
-        //        _sqlCommand.Connection.Close();
-        //    }
-        //    return sqlResponse;
-        //}
+                    while (_dataReader.Read())
+                    {
+                        sqlResponse.Add(_dataReader.GetName(0), _dataReader.GetValue(0).ToString());
+                        sqlResponse.Add("Login", login);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    return null;
+                }
+                finally
+                {
+                    _sqlCommand.Connection.Close();
+                }
+            }
+            return sqlResponse;
+        }
 
 
 
@@ -445,6 +443,24 @@ namespace Home
                 _sqlCommandInsert.Parameters.AddWithValue("@signing", contract._SigningDate.ToString());
                 _sqlCommandInsert.Parameters.AddWithValue("@expiration", contract._EndDate.ToString());
                 _sqlCommandInsert.Parameters.AddWithValue("@ftp", contract._EndDate.ToString());
+
+                _sqlCommandInsert.Connection.Open();
+                _sqlCommandInsert.ExecuteNonQuery();
+
+                _sqlCommandInsert.Connection.Close();
+            }
+        }
+
+        public void AddUserToDatabase(string login, string password)
+        {
+            using (_sqlConnection = new SqlConnection(ConnectionString))
+            {
+                string insertString = "Insert into Users(Login, Password) " +
+                    "values(@Login, @Password)";
+
+                SqlCommand _sqlCommandInsert = new SqlCommand(insertString, _sqlConnection);
+                _sqlCommandInsert.Parameters.AddWithValue("@Login", login);
+                _sqlCommandInsert.Parameters.AddWithValue("@Password", password);
 
                 _sqlCommandInsert.Connection.Open();
                 _sqlCommandInsert.ExecuteNonQuery();
