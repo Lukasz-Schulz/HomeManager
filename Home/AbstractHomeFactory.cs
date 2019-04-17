@@ -10,7 +10,7 @@ namespace Home
         protected IOwnerBuilder _OwnerBuilder { get; set; }
         protected IContractBuilder _ContractBuilder { get; set; }
 
-        public abstract Home CreateHomeFromDataBase(string homeName);
+        public abstract List<Home> CreateHomeFromDataBase(string homeName);
         public abstract Home CreateNewHome(string json);
     }
 }

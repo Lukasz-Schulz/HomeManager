@@ -12,3 +12,15 @@ C:\Users\CM\source\repos\HomeManager\Home\obj\Release\netcoreapp2.0\Home.Assembl
 C:\Users\CM\source\repos\HomeManager\Home\obj\Release\netcoreapp2.0\Home.csproj.CopyComplete
 C:\Users\CM\source\repos\HomeManager\Home\obj\Release\netcoreapp2.0\Home.dll
 C:\Users\CM\source\repos\HomeManager\Home\obj\Release\netcoreapp2.0\Home.pdb
+C:\Users\LS\source\repos\HomeManager\Home\bin\Release\netcoreapp2.0\Home.deps.json
+C:\Users\LS\source\repos\HomeManager\Home\bin\Release\netcoreapp2.0\Home.dll
+C:\Users\LS\source\repos\HomeManager\Home\bin\Release\netcoreapp2.0\Home.pdb
+C:\Users\LS\source\repos\HomeManager\Home\bin\Release\netcoreapp2.0\Newtonsoft.Json.dll
+C:\Users\LS\source\repos\HomeManager\Home\bin\Release\netcoreapp2.0\Newtonsoft.Json.xml
+C:\Users\LS\source\repos\HomeManager\Home\obj\Release\netcoreapp2.0\Home.csprojAssemblyReference.cache
+C:\Users\LS\source\repos\HomeManager\Home\obj\Release\netcoreapp2.0\Home.csproj.CoreCompileInputs.cache
+C:\Users\LS\source\repos\HomeManager\Home\obj\Release\netcoreapp2.0\Home.AssemblyInfoInputs.cache
+C:\Users\LS\source\repos\HomeManager\Home\obj\Release\netcoreapp2.0\Home.AssemblyInfo.cs
+C:\Users\LS\source\repos\HomeManager\Home\obj\Release\netcoreapp2.0\Home.csproj.CopyComplete
+C:\Users\LS\source\repos\HomeManager\Home\obj\Release\netcoreapp2.0\Home.dll
+C:\Users\LS\source\repos\HomeManager\Home\obj\Release\netcoreapp2.0\Home.pdb

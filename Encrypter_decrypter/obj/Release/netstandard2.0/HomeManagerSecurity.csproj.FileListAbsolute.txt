@@ -1,0 +1,9 @@
+C:\Users\LS\source\repos\HomeManager\Encrypter_decrypter\bin\Release\netstandard2.0\HomeManagerSecurity.deps.json
+C:\Users\LS\source\repos\HomeManager\Encrypter_decrypter\bin\Release\netstandard2.0\HomeManagerSecurity.dll
+C:\Users\LS\source\repos\HomeManager\Encrypter_decrypter\bin\Release\netstandard2.0\HomeManagerSecurity.pdb
+C:\Users\LS\source\repos\HomeManager\Encrypter_decrypter\obj\Release\netstandard2.0\HomeManagerSecurity.csprojAssemblyReference.cache
+C:\Users\LS\source\repos\HomeManager\Encrypter_decrypter\obj\Release\netstandard2.0\HomeManagerSecurity.csproj.CoreCompileInputs.cache
+C:\Users\LS\source\repos\HomeManager\Encrypter_decrypter\obj\Release\netstandard2.0\HomeManagerSecurity.AssemblyInfoInputs.cache
+C:\Users\LS\source\repos\HomeManager\Encrypter_decrypter\obj\Release\netstandard2.0\HomeManagerSecurity.AssemblyInfo.cs
+C:\Users\LS\source\repos\HomeManager\Encrypter_decrypter\obj\Release\netstandard2.0\HomeManagerSecurity.dll
+C:\Users\LS\source\repos\HomeManager\Encrypter_decrypter\obj\Release\netstandard2.0\HomeManagerSecurity.pdb

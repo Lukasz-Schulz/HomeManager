@@ -131,7 +131,47 @@ namespace Home
             }
         }
 
-        public Dictionary<string, string> GetHomeData(string homename)
+        public List<Dictionary<string, string>> GetHomeData(string ownername)
+        {
+            List<Dictionary<string, string>> sqlResponse = new List<Dictionary<string, string>>();
+            string query = @"SELECT Name, Counters, Owner, Street, HouseNumber, FlatNumber, PostalCode, City, Contracts FROM Homes WHERE Owner=@param";
+            using (_sqlConnection = new SqlConnection(ConnectionString))
+            {
+                _sqlCommand = new SqlCommand(query, _sqlConnection);
+                _sqlCommand.Parameters.AddWithValue("@param", ownername);
+                try
+                {
+                    _sqlCommand.Connection.Open();
+                    _dataReader = _sqlCommand.ExecuteReader();
+                    int linesCount = 0;
+                    while (_dataReader.Read())
+                    {
+                        sqlResponse.Add(new Dictionary<string, string>());
+                        sqlResponse[linesCount].Add(_dataReader.GetName(0), _dataReader.GetSqlValue(0).ToString());
+                        sqlResponse[linesCount].Add(_dataReader.GetName(1), _dataReader.GetString(1));
+                        sqlResponse[linesCount].Add(_dataReader.GetName(2), _dataReader.GetSqlValue(2).ToString());
+                        sqlResponse[linesCount].Add(_dataReader.GetName(3), _dataReader.GetSqlValue(3).ToString());
+                        sqlResponse[linesCount].Add(_dataReader.GetName(4), _dataReader.GetSqlValue(4).ToString());
+                        sqlResponse[linesCount].Add(_dataReader.GetName(5), _dataReader.GetSqlValue(5).ToString());
+                        sqlResponse[linesCount].Add(_dataReader.GetName(6), _dataReader.GetString(6));
+                        sqlResponse[linesCount].Add(_dataReader.GetName(7), _dataReader.GetString(7));
+                        sqlResponse[linesCount].Add(_dataReader.GetName(8), _dataReader.GetString(8));
+                        linesCount++;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    return null;
+                }
+                finally
+                {
+                    _sqlCommand.Connection.Close();
+                }
+            }
+            return sqlResponse;
+        }
+
+        public Dictionary<string, string> GetHomeDataByname(string homename)
         {
             Dictionary<string, string> sqlResponse = new Dictionary<string, string>();
             string query = @"SELECT Name, Counters, Owner, Street, HouseNumber, FlatNumber, PostalCode, City, Contracts FROM Homes WHERE Name=@param";
@@ -202,14 +242,47 @@ namespace Home
             return sqlResponse;
         }
 
-        public Dictionary<string, string> GetOwnerData(string ownerId)
+        public Dictionary<string, string> GetOwnerDataByEmail(string email)
+        {
+            Dictionary<string, string> sqlResponse = new Dictionary<string, string>();
+            string query = @"SELECT IdNumber, FirstName, Secondname, Email FROM Owners WHERE Email=@param";
+            using (_sqlConnection = new SqlConnection(ConnectionString))
+            {
+                _sqlCommand = new SqlCommand(query, _sqlConnection);
+                _sqlCommand.Parameters.AddWithValue("@param", email);
+                try
+                {
+                    _sqlCommand.Connection.Open();
+                    _dataReader = _sqlCommand.ExecuteReader();
+
+                    while (_dataReader.Read())
+                    {
+                        sqlResponse.Add(_dataReader.GetName(0), _dataReader.GetSqlValue(0).ToString());
+                        sqlResponse.Add(_dataReader.GetName(1), _dataReader.GetSqlValue(1).ToString());
+                        sqlResponse.Add(_dataReader.GetName(2), _dataReader.GetSqlValue(2).ToString());
+                        sqlResponse.Add(_dataReader.GetName(3), _dataReader.GetSqlValue(3).ToString());
+                    }
+                }
+                catch (Exception)
+                {
+                    return null;
+                }
+                finally
+                {
+                    _sqlCommand.Connection.Close();
+                }
+            }
+            return sqlResponse;
+        }
+
+        public Dictionary<string, string> GetOwnerDataById(string id)
         {
             Dictionary<string, string> sqlResponse = new Dictionary<string, string>();
             string query = @"SELECT IdNumber, FirstName, Secondname, Email FROM Owners WHERE IdNumber=@param";
             using (_sqlConnection = new SqlConnection(ConnectionString))
             {
                 _sqlCommand = new SqlCommand(query, _sqlConnection);
-                _sqlCommand.Parameters.AddWithValue("@param", ownerId);
+                _sqlCommand.Parameters.AddWithValue("@param", id);
                 try
                 {
                     _sqlCommand.Connection.Open();
@@ -285,14 +358,14 @@ namespace Home
             return sqlResponse;
         }
 
-        public Dictionary<string, string> GetEncryptedPassword(string login)
+        public Dictionary<string, string> GetEncryptedPasswordAndEmail(string email)
         {
             Dictionary<string, string> sqlResponse = new Dictionary<string, string>();
-            string query = @"SELECT Password FROM Users WHERE Login=@param";
+            string query = @"SELECT Password, Email FROM Users WHERE Email=@param";
             using (_sqlConnection = new SqlConnection(ConnectionString))
             {
                 _sqlCommand = new SqlCommand(query, _sqlConnection);
-                _sqlCommand.Parameters.AddWithValue("@param", login);
+                _sqlCommand.Parameters.AddWithValue("@param", email);
                 try
                 {
                     _sqlCommand.Connection.Open();
@@ -301,7 +374,7 @@ namespace Home
                     while (_dataReader.Read())
                     {
                         sqlResponse.Add(_dataReader.GetName(0), _dataReader.GetValue(0).ToString());
-                        sqlResponse.Add("Login", login);
+                        sqlResponse.Add(_dataReader.GetName(1), _dataReader.GetValue(1).ToString());
                     }
                 }
                 catch (Exception ex)
@@ -451,15 +524,15 @@ namespace Home
             }
         }
 
-        public void AddUserToDatabase(string login, string password)
+        public void AddUserToDatabase(string email, string password)
         {
             using (_sqlConnection = new SqlConnection(ConnectionString))
             {
-                string insertString = "Insert into Users(Login, Password) " +
-                    "values(@Login, @Password)";
+                string insertString = "Insert into Users(Email, Password) " +
+                    "values(@Email, @Password)";
 
                 SqlCommand _sqlCommandInsert = new SqlCommand(insertString, _sqlConnection);
-                _sqlCommandInsert.Parameters.AddWithValue("@Login", login);
+                _sqlCommandInsert.Parameters.AddWithValue("@Email", email);
                 _sqlCommandInsert.Parameters.AddWithValue("@Password", password);
 
                 _sqlCommandInsert.Connection.Open();
