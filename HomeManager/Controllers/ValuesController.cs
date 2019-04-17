@@ -6,25 +6,32 @@ using Microsoft.AspNetCore.Mvc;
 using Home;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
+using HomeManager.Models;
 
 namespace HomeManager.Controllers
 {
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
+        Security security = new Security();
+        public ValuesController()
+        {
+            var test = Program.TheSessionHolder;
+            
+        }
+
+        readonly Security _LocalSecurity = new Security();
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
         {
-
-
             JObject o1 = JObject.Parse(System.IO.File.ReadAllText(@"Models/exampleInput.json"));
             //usunac
             BasicHomeFactory homeFactory = new BasicHomeFactory();
             //Home.Home home = homeFactory.CreateHomeFromDataBase("8902");
 
-            //DatabaseConnection database = new DatabaseConnection();
-
+            DatabaseConnection database = new DatabaseConnection();
+            //var user = database.GetUserData("admin");
             //database.AddHomeToDatabase(home);
 
             //foreach (var c in home._Counters)
@@ -62,12 +69,33 @@ namespace HomeManager.Controllers
             var json = JsonConvert.SerializeObject(resp);
             return JObject.Parse(json).ToString();
         }
-        
+
         // POST api/values
-        [HttpPost]
-        public void Post([FromForm]Dictionary<string,string> value, [FromHeader]string header)
+        [HttpPost("{id}")]
+        public string Post([FromForm]Dictionary<string,string> value, string id)
         {
+            string response;
+            if (id.Equals("login"))
+            {
+                response = security.Login(value["login"], value["password"]);
+                return response;
+            }
+            else if (id.Equals("logout"))
+            {
+                bool success = security.Logout(value["sessionKey"]);
+                return success.ToString();
+            }
+            else
+            {
+                return Program.TheSessionHolder.ProlongSession(value["sessionKey"]).ToString();
+            }
+
+            BasicHomeFactory basicHomeFactory = new BasicHomeFactory();
+            var home = basicHomeFactory.TestHome();
+            var jsonHome = JsonConvert.SerializeObject(home);
             var test = value;
+
+            return jsonHome;
         }
 
         // PUT api/values/5
