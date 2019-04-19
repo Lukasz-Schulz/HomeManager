@@ -5,28 +5,8 @@ using System.Threading.Tasks;
 
 namespace HomeManager.Models
 {
-    public class SessionHolder
+    public partial class SessionHolder
     {
-        protected class Session
-        {
-            public Session(string login)
-            {
-                    Start = DateTime.Now;
-                    ProlongueSession();
-                    User = login;
-                    SessionKey = login +"+"+ Start.ToShortDateString() +"+"+ Start.ToShortTimeString();
-            }
-
-            public DateTime Start { get; private set; }
-            public DateTime Expiry { get; private set; }
-            public string User { get; private set; }
-            public string SessionKey { get; private set; }
-
-            public void ProlongueSession()
-            {
-                Expiry = DateTime.Now.AddMinutes(5);
-            }
-        }
     
         private Dictionary<string, Session> _Sessions = new Dictionary<string, Session>();
 
@@ -35,8 +15,8 @@ namespace HomeManager.Models
             if (user.Length > 0)
             {
                 Session session = new Session(user);
-                _Sessions.Add(session.SessionKey, session);
-                return session.SessionKey;
+                if(_Sessions.TryAdd(session.SessionKey, session)) return session.SessionKey;
+                else return null;
             }
             else
             {
@@ -70,9 +50,9 @@ namespace HomeManager.Models
             return false;
         }
 
-        public bool CheckIfSessionForUserExists(string user)
+        public bool CheckIfSessionForUserExists(string email)
         {
-            if( _Sessions.FirstOrDefault(session => session.Value.User == user).Key != null)
+            if( _Sessions.FirstOrDefault(session => session.Value.User._Email == email).Key != null)
             {
                 return true;
             }
@@ -85,6 +65,11 @@ namespace HomeManager.Models
         public void DropSession(string sessionkey)
         {
             _Sessions.Remove(sessionkey);
+        }
+
+        public List<Home.Home> GetHome(string sessionKey)
+        {
+            return _Sessions[sessionKey].GetHomes();
         }
     }
 }

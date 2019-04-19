@@ -7,3 +7,12 @@ C:\Users\CM\source\repos\HomeManager\Encrypter_decrypter\obj\Debug\netstandard2.
 C:\Users\CM\source\repos\HomeManager\Encrypter_decrypter\obj\Debug\netstandard2.0\HomeManagerSecurity.AssemblyInfo.cs
 C:\Users\CM\source\repos\HomeManager\Encrypter_decrypter\obj\Debug\netstandard2.0\HomeManagerSecurity.dll
 C:\Users\CM\source\repos\HomeManager\Encrypter_decrypter\obj\Debug\netstandard2.0\HomeManagerSecurity.pdb
+C:\Users\LS\source\repos\HomeManager\Encrypter_decrypter\bin\Debug\netstandard2.0\HomeManagerSecurity.deps.json
+C:\Users\LS\source\repos\HomeManager\Encrypter_decrypter\bin\Debug\netstandard2.0\HomeManagerSecurity.dll
+C:\Users\LS\source\repos\HomeManager\Encrypter_decrypter\bin\Debug\netstandard2.0\HomeManagerSecurity.pdb
+C:\Users\LS\source\repos\HomeManager\Encrypter_decrypter\obj\Debug\netstandard2.0\HomeManagerSecurity.csprojAssemblyReference.cache
+C:\Users\LS\source\repos\HomeManager\Encrypter_decrypter\obj\Debug\netstandard2.0\HomeManagerSecurity.csproj.CoreCompileInputs.cache
+C:\Users\LS\source\repos\HomeManager\Encrypter_decrypter\obj\Debug\netstandard2.0\HomeManagerSecurity.AssemblyInfoInputs.cache
+C:\Users\LS\source\repos\HomeManager\Encrypter_decrypter\obj\Debug\netstandard2.0\HomeManagerSecurity.AssemblyInfo.cs
+C:\Users\LS\source\repos\HomeManager\Encrypter_decrypter\obj\Debug\netstandard2.0\HomeManagerSecurity.dll
+C:\Users\LS\source\repos\HomeManager\Encrypter_decrypter\obj\Debug\netstandard2.0\HomeManagerSecurity.pdb

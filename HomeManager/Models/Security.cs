@@ -15,10 +15,10 @@ namespace HomeManager.Models
             return encrypter.Encrypt(s);
         }
 
-        private bool CheckCredentials(string login, string password)
+        private bool CheckCredentials(string email, string password)
         {
             DatabaseConnection database = new DatabaseConnection();
-            var user = database.GetEncryptedPassword(login);
+            var user = database.GetEncryptedPasswordAndEmail(email);
             try
             {
                 var encrypted = Encrypt(password).Trim();
@@ -37,14 +37,14 @@ namespace HomeManager.Models
             }
         }
 
-        public string Login(string login, string password)
+        public string Login(string email, string password)
         {
-            if (!Program.TheSessionHolder.CheckIfSessionForUserExists(login))
+            if (!Program.TheSessionHolder.CheckIfSessionForUserExists(email))
             {
-                bool isLogged = CheckCredentials(login, password);
-                if (isLogged)
+                bool isCorrect = CheckCredentials(email, password);
+                if (isCorrect)
                 {
-                    string newSessionKey = Program.TheSessionHolder.CreateSession(login);
+                    string newSessionKey = Program.TheSessionHolder.CreateSession(email);
                     return newSessionKey;
                 }
                 else return "failure";
