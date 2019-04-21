@@ -16,7 +16,7 @@ namespace HomeManager.Controllers
             DatabaseConnection connection = new DatabaseConnection();
             try
             {
-                if (CheckCredentials(profile))
+                if (ValidateCredentials(profile))
                 {
                     connection.AddUserToDatabase(profile["email"], security.Encrypt(profile["password"]));
 
@@ -45,15 +45,16 @@ namespace HomeManager.Controllers
             }
         }
 
-        private bool CheckCredentials(Dictionary<string, string> profile)
+        private bool ValidateCredentials(Dictionary<string, string> profile)
         {
             try
             {
-                if (
-                    EmailIsOk(profile["email"]) &&
-                    PasswordIsOk(profile["passwod"]) &&
-                    profile["firstName"].Length >= 3 &&
-                    profile["secondname"].Length >= 3)
+                bool email = EmailIsOk(profile["email"]);
+                bool pwd = PasswordIsOk(profile["password"]);
+                bool fname = profile["firstName"].Length >= 3;
+                bool sname = profile["secondName"].Length >= 3;
+
+                if (email && pwd && fname && sname)
                 {
                     return true;
                 }
@@ -93,5 +94,12 @@ namespace HomeManager.Controllers
             else
                 return false;
         }
+
+        //private void ConfirmEmail(string email)
+        //{            
+        //    string confirmationUrl = Program.TheRegistrationConfirmation.CreateConfirmationUrl(email);
+        //    var emailSender = new Utils.EmailSender();
+        //    emailSender.SendEmailAsync(email, confirmationUrl);
+        //}
     }
 }

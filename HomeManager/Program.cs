@@ -14,7 +14,7 @@ namespace HomeManager
     public class Program
     {
         public static SessionHolder TheSessionHolder = new SessionHolder();
-
+        public static Utils.RegistrationConfirmation TheRegistrationConfirmation = new Utils.RegistrationConfirmation();
         public static void Main(string[] args)
         {
             BuildWebHost(args).Run();
